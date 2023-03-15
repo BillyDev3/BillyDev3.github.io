@@ -2,6 +2,14 @@ body {
   background-color: silver;
 }
 
+table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
 h1 {
   color: red;
   font-size: 24px;
