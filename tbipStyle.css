@@ -25,10 +25,6 @@ nav{
   flex-wrap: wrap;
 }
 
-.logo{
-  width: 140px;
-}
-
 nav ul li{
   display: inline-block;
   list-style: none;
