@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tbipStyle.css">
-    <title>Welcome - The Boys In Paradise</title>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav>
-          <h1>The Boys In Paradise</h1>
-          <ul>
-            <li><a href="Dave.html">Dave</li>
-            <li><a href="Aids.html">Aids</li>
-            <li><a href="Billy.html">Bill</li>    
-          </ul>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tbipStyle.css">
+  <title>Welcome - The Boys In Paradise</title>
+  <!-- Add this script in the head of your HTML document -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Wait for the DOM to be fully loaded
+      var logos = document.querySelectorAll('.logo');
+
+      // Add event listener to each logo element
+      logos.forEach(function (logo) {
+        logo.addEventListener('animationend', function () {
+          // Remove overflow: hidden from body when the animation is complete
+          document.body.style.overflow = 'visible';
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="header">
+    <div id="top">
+      <img src="images/theBoys.png" class="logo">
+    </div>
+    <div class="centerText">
+      <h1>The Boys In Paradise</h1>
+      <nav>
+        <ul>
+          <li><a href="">Listen</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">Tour</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="bot">
+      <div id="botLogo">
+        <img src="images/inParadise.png" class="logo">
+      </div>
+      <div class="legalText">
+        <h1>© 2023 FORD RECORDS. ALL RIGHTS RESERVED. SEND US FEEDBACK | PRIVACY POLICY | HOW WE USE YOUR DATA | DO NOT SELL MY PERSONAL INFORMATION | YOUR CALIFORNIA PRIVACY RIGHTS | TERMS AND CONDITIONS</h1>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
