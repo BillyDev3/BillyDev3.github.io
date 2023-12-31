@@ -1,55 +1,101 @@
-*{
+@keyframes flyInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flyInFromRight {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+* {
   margin: 0;
   padding: 0;
-  font-family: 'verdana', sans-serif;
   box-sizing: border-box;
 }
 
-body{
-  background-color: silver;
-}
-
-#header{
-  width: 100%;
-  height: 100vh;
-  background-image: url();
+body {
+  background: url('images/pinkBlueBG.png') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+  overflow: hidden; /* Hide the overflow initially */
 }
 
-.container{
-  padding: 10px 10%;
+#header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
-nav{
+.logo {
+  height: 150px;
+}
+
+#top, #bot {
+  margin: 10px 10px;
+}
+
+#top {
+  animation: flyInFromLeft 1s ease; /* Apply the animation to all elements with class 'logo' */
+}
+
+#bot {
+  display: flex;
+  flex-direction: column;
+}
+
+#botLogo {
+  margin-left: auto;
+  animation: flyInFromRight 1s ease; /* Apply the animation to all elements with class 'logo' */
+}
+
+.centerText {
+  text-align: center;
+  padding: 50px 10%;
+}
+
+.legalText {
+  text-align: center;
+  padding: 4px 10%;
+  font-family: 'verdana', sans-serif;
+  font-size: 4px;
+}
+
+nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-nav ul li{
+nav ul {
   list-style: none;
-  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-nav ul li a{
-  color: black;
+nav ul li {
+  margin: 10px 10px;
+}
+
+nav a {
   text-decoration: none;
-  font-size: 18px;
+  color: black;
+  transition: color 0.3s ease;
+  font-size: 25px;
 }
 
-nav ul li a::after{
-  content: '';
-  width: 100%;
-  height: 3px;
-  background: black;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
-nav ul li:hover::after{
-  width: 100%;
+nav a:hover {
+  color: green;
 }
